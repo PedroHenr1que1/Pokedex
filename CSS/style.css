@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: 'Pokemom01';
+  src: url('../Fonts/Pokemon Solid.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pokemom02';
+  src: url('../Fonts/Pokemon Hollow.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  min-width: 850px;
+  text-align: center;
+  background-image: url("../Images/background02.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
+.Title01 {
+  font-family: 'Pokemom01';
+  color: #ffe100;
+  font-size: 4.5rem;
+  margin: 15px;
+  text-shadow: 
+    -1px 0px 0 #0055c4,
+    -2px 0px 0 #0055c4, 
+    -3px 0px 0 #0055c4,
+
+    -1px 1px 0 #014296,
+    -2px 2px 0 #014296,
+    -3px 3px 0 #014296,
+    -4px 4px 0 #014296,
+    -5px 5px 0 #014296,
+    -6px 6px 0 #014296,
+    -7px 7px 0 #014296,
+    
+    2px -1px 0 #0055c4,
+    3px -2px 0 #0055c4,
+    2px 2px 0 #0055c4,
+    3px 2px 0 #0055c4;
+}
+
+main {
+  display: inline-block;
+  position: relative;
+  margin-top: 150px;
+}
+
+.pokedex {
+  width: 100%;
+  max-width: 800px;
+}
+
+.pokemon__image {
+  position: absolute;
+  bottom: 48%;
+  left: 28%;
+  transform: translate(-63%, 20%);
+  height: 25%;
+}
+
+.pokemon__data {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-weight: 600;
+  width: 400px;
+  color: #aaaaaa;
+  top: 33.5%;
+  left: 62%;
+}
+
+.pokemon__name {
+  text-align: left;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.pokemon__habitat {
+  text-align: left;
+  font-size: clamp(0px, 5vw, 16px);
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.pokemon__weight {
+  text-align: left;
+  font-size: clamp(0px, 5vw, 16px);
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.pokemon__type {
+  text-align: left;
+  font-size: clamp(0px, 5vw, 16px);
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.pokemon__type {
+  text-align: left;
+  font-size: clamp(0px, 5vw, 16px);
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.form {
+  position: absolute;
+  width: 25%;
+  bottom: 9%;
+  left: 7.5%;
+  height: 10%;
+}
+
+.input__search {
+  width: 100%;
+  height: 100%;
+  padding: 4%;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #3a444d;
+  font-size: clamp(8px, 5vw, 1rem);
+  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+}
+
+.buttons {
+  position: absolute;
+  bottom: 8%;
+  height: 50px;
+  left: 79%;
+  width: 35%;
+  transform: translate(-57%, 0);
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  width: 50%;
+  padding: 4%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: clamp(8px, 5vw, 1rem);
+  font-weight: 600;
+  color: white;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+.button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 0.9rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
